@@ -1,8 +1,7 @@
-// pubspec.yaml
-
 name: om_gurudev_milk_dairy
 description: Om Gurudev Milk Dairy App
 version: 1.0.0+1
+
 environment:
   sdk: ">=2.17.0 <3.0.0"
 
