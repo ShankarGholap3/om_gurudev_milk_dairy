@@ -1,0 +1,24 @@
+name: om_gurudev_milk_dairy
+description: Om Gurudev Milk Dairy App
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.4.2
+  path: ^1.8.3
+  path_provider: ^2.1.5
+  excel: ^4.0.6
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  
