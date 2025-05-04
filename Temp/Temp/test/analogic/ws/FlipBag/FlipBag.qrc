@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/FlipBagIcon.png</file>
+    <file>images/FlipBagIcon2.png</file>
+    <file>images/FlipBagIcon3.png</file>
+    <file>images/EraserIcon.png</file>
+    <file>images/QuestionIcon.png</file>    
+</qresource>
+</RCC>

@@ -1,0 +1,26 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+   <file>images/AddIcon.png</file>
+   <file>images/Anomoly.png</file>
+   <file>images/Bulk.png</file>
+   <file>images/Contraband.png</file>
+   <file>images/EraserIcon.png</file>
+   <file>images/ExitIcon.png</file>
+   <file>images/Explosive.png</file>
+   <file>images/EyeIcon.png</file>
+   <file>images/FileOpen.png</file>
+   <file>images/Liquid.png</file>
+   <file>images/LiquidAerosolGas.png</file>
+   <file>images/MassIcon.png</file>
+   <file>images/MoveIcon.png</file>
+   <file>images/ResizeIcon.png</file>
+   <file>images/SaveFileIcon.png</file>
+   <file>images/SaveTextIcon.png</file>
+   <file>images/Shield.png</file>
+   <file>images/ThreatIcon.png</file>
+   <file>images/TypeIcon.png</file>
+   <file>images/Weapon.png</file>
+
+</qresource>
+</RCC>
+

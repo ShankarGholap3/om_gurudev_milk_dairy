@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Qt VTK Viewer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_VTK_File"/>
+    <addaction name="actionOpen_Image_File"/>
+    <addaction name="actionSave_Image_File"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuImage_Filters">
+    <property name="title">
+     <string>Image Filters</string>
+    </property>
+    <addaction name="actionSharpen_Image"/>
+    <addaction name="actionLapacian_Filter"/>
+    <addaction name="actionSobel_Filter"/>
+    <addaction name="actionSeparable_Convolution"/>
+    <addaction name="actionButterworth_Low_pass"/>
+    <addaction name="actionButtwerworth_High_pass"/>
+    <addaction name="actionGenerate_Countour_Lines"/>
+   </widget>
+   <widget class="QMenu" name="menuDebug">
+    <property name="title">
+     <string>Scene/Image Settings</string>
+    </property>
+    <addaction name="actionShow_Image_Info"/>
+    <addaction name="actionShow_Image_Hisogram_02"/>
+    <addaction name="actionShow_Image_Staitistics"/>
+    <addaction name="actionSet_Window_Background"/>
+    <addaction name="actionShow_Image_Histogram"/>
+   </widget>
+   <widget class="QMenu" name="menuImage_Math">
+    <property name="title">
+     <string>Image Math</string>
+    </property>
+    <addaction name="actionBrighten_Image"/>
+    <addaction name="actionBlend_Two_Images"/>
+    <addaction name="actionSubtract_A_B_image"/>
+    <addaction name="actionBlend_MULTIPLY_Two_Images"/>
+    <addaction name="actionInvert_Image"/>
+   </widget>
+   <widget class="QMenu" name="menuImage_Component_Manipulation">
+    <property name="title">
+     <string>Image Component Change</string>
+    </property>
+    <addaction name="actionColorize_Image"/>
+    <addaction name="actionRGB_To_Gray"/>
+    <addaction name="actionExtract_Component"/>
+    <addaction name="actionRemove_Alpha"/>
+    <addaction name="actionMegre_Component_Images"/>
+   </widget>
+   <widget class="QMenu" name="menuRun_Stats">
+    <property name="title">
+     <string>Run Stats</string>
+    </property>
+    <addaction name="actionClear_Runtime_Sum"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuImage_Filters"/>
+   <addaction name="menuImage_Math"/>
+   <addaction name="menuImage_Component_Manipulation"/>
+   <addaction name="menuDebug"/>
+   <addaction name="menuRun_Stats"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/ExitIcon.png</normaloff>:/iconImages/ExitIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Backspace</string>
+   </property>
+  </action>
+  <action name="actionOpen_VTK_File">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/VtkFolderIcon.png</normaloff>:/iconImages/VtkFolderIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open VTK File</string>
+   </property>
+  </action>
+  <action name="actionOpen_Image_File">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/ImageFolderIcon.png</normaloff>:/iconImages/ImageFolderIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Image File </string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/AboutIcon.png</normaloff>:/iconImages/AboutIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionSharpen_Image">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/SharpenIcon.png</normaloff>:/iconImages/SharpenIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sharpen Image</string>
+   </property>
+  </action>
+  <action name="actionSave_Image_File">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/SaveFileIcon.png</normaloff>:/iconImages/SaveFileIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Image File</string>
+   </property>
+  </action>
+  <action name="actionLapacian_Filter">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/LaplaceFilterIcon.png</normaloff>:/iconImages/LaplaceFilterIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Lapacian Filter </string>
+   </property>
+  </action>
+  <action name="actionBrighten_Image">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/BrightenIcon.png</normaloff>:/iconImages/BrightenIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Brighten Image</string>
+   </property>
+  </action>
+  <action name="actionSobel_Filter">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/SobelFilterIcon.png</normaloff>:/iconImages/SobelFilterIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sobel Filter</string>
+   </property>
+  </action>
+  <action name="actionBlend_Two_Images">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/AddIcon.png</normaloff>:/iconImages/AddIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Blend ADD Two Images</string>
+   </property>
+  </action>
+  <action name="actionBlend_MULTIPLY_Two_Images">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/AsteriskIcon.png</normaloff>:/iconImages/AsteriskIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Blend MULTIPLY Two Images</string>
+   </property>
+  </action>
+  <action name="actionSeparable_Convolution">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/ConvolutionIcon.png</normaloff>:/iconImages/ConvolutionIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Separable Convolution</string>
+   </property>
+  </action>
+  <action name="actionButterworth_Low_pass">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/FilterIconLowPass.png</normaloff>:/iconImages/FilterIconLowPass.png</iconset>
+   </property>
+   <property name="text">
+    <string>Butterworth Low pass</string>
+   </property>
+  </action>
+  <action name="actionShow_Image_Info">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/ImageInfoIcon.png</normaloff>:/iconImages/ImageInfoIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Image Info</string>
+   </property>
+  </action>
+  <action name="actionSet_Window_Background">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/SetBackgroundIcon.png</normaloff>:/iconImages/SetBackgroundIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Set Window Background</string>
+   </property>
+  </action>
+  <action name="actionButtwerworth_High_pass">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/FilterIconHiPass.png</normaloff>:/iconImages/FilterIconHiPass.png</iconset>
+   </property>
+   <property name="text">
+    <string>Buttwerworth High pass</string>
+   </property>
+  </action>
+  <action name="actionSubtract_A_B_image">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/MinusIcon.png</normaloff>:/iconImages/MinusIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Subtract A-B image</string>
+   </property>
+  </action>
+  <action name="actionExtract_Component">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/SeperateIcon.png</normaloff>:/iconImages/SeperateIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Extract Component</string>
+   </property>
+  </action>
+  <action name="actionColorize_Image">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/ColorizeIcon.png</normaloff>:/iconImages/ColorizeIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colorize Image</string>
+   </property>
+  </action>
+  <action name="actionShow_Image_Histogram">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/HistogramIcon.png</normaloff>:/iconImages/HistogramIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Image Histogram Bar Plot</string>
+   </property>
+  </action>
+  <action name="actionMegre_Component_Images">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/MergeIcon.png</normaloff>:/iconImages/MergeIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Megre 3 1-Component Images as RGB</string>
+   </property>
+  </action>
+  <action name="actionShow_Image_Hisogram_02">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/HistogramIcon02.png</normaloff>:/iconImages/HistogramIcon02.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Image Hisogram Line Plot</string>
+   </property>
+  </action>
+  <action name="actionRemove_Alpha">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/RemoveAlphaIcon.png</normaloff>:/iconImages/RemoveAlphaIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove Alpha</string>
+   </property>
+  </action>
+  <action name="actionInvert_Image">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/InverseIcon.png</normaloff>:/iconImages/InverseIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Invert Image</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Countour_Lines">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/CountourLinesIcon.png</normaloff>:/iconImages/CountourLinesIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Generate Countour Lines</string>
+   </property>
+  </action>
+  <action name="actionClear_Runtime_Sum">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/EraseIcon.png</normaloff>:/iconImages/EraseIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Runtime Sum</string>
+   </property>
+  </action>
+  <action name="actionRGB_To_Gray">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/RGBToGrayIcon.png</normaloff>:/iconImages/RGBToGrayIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>RGB To Gray</string>
+   </property>
+  </action>
+  <action name="actionShow_Image_Staitistics">
+   <property name="icon">
+    <iconset resource="SharpenImage.qrc">
+     <normaloff>:/iconImages/ImageStatisicsIcon.png</normaloff>:/iconImages/ImageStatisicsIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Image Staitistics</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="SharpenImage.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>onOpenVtkFileDialog()</slot>
+  <slot>showAboutDialog()</slot>
+ </slots>
+</ui>

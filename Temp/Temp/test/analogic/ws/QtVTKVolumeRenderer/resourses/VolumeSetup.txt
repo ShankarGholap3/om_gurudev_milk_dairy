@@ -1,0 +1,4 @@
+#-----------------------------------------
+# Setup File for Volume Viewer
+BagDataPath=/home/analogic/TipBags/
+ 

@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+        <file>images/About.png</file>
+        <file>images/AppExit.png</file>
+        <file>images/RectTubeIcon.png</file>
+</qresource>
+</RCC>

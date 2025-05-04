@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1413</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>1</number>
+        </property>
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item>
+         <layout class="QGridLayout" name="vtkLayout">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="LeftLabel">
+            <property name="text">
+             <string>Left</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="RightLabel">
+            <property name="text">
+             <string>Right</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="primaryActionLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="buttonZoomIn">
+            <property name="text">
+             <string>Zoom In</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonZoomOut">
+            <property name="text">
+             <string>Zoom Out</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonThreatOnly">
+            <property name="text">
+             <string>Threat Only</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonCycleThreat">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Cycle Threat</string>
+            </property>
+            <property name="text">
+             <string>Cycle Threat</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonResetGeometry">
+            <property name="text">
+             <string>Reset</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayoutBottom">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <property name="topMargin">
+           <number>3</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
+           <number>3</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="minimumSize">
+               <size>
+                <width>75</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>75</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Crop Level</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="cropSlider">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QCheckBox" name="checkSlabX">
+              <property name="text">
+               <string>X</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkSlabY">
+              <property name="text">
+               <string>Y</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkSlabZ">
+              <property name="text">
+               <string>Z</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="allMaterialsButton">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="cameraButton">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="showMetalButton">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="showOrganicButton">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="showGrayscaleButton">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="showInverseButton">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <item>
+             <widget class="QCheckBox" name="checkBoxThreat">
+              <property name="text">
+               <string>Threat</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxSurface">
+              <property name="text">
+               <string>Surface</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxLaptop">
+              <property name="text">
+               <string>Laptop</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="pickMinusButton">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="buttonOpperatorAccept">
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Arm Operator Threat</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="buttonOperatorThreatRubberBand">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="pickPlusButton">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="operatorThreatCancel">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="deleteOperatorThreat">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonClearThreat">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Clear Threat</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonSuspectBag">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Suspect Bag</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonClearBag">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Next Bag</string>
+            </property>
+            <property name="text">
+             <string>Clear Bag</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1413</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuActions">
+    <property name="title">
+     <string>Actions</string>
+    </property>
+    <addaction name="actionReset_View"/>
+    <addaction name="actionPan_Right_Viewer"/>
+    <addaction name="actionMakeRightViewerAThreatRenderer"/>
+    <addaction name="actionCenter_Right_Viewer"/>
+    <addaction name="action_ResetRightRenderer"/>
+    <addaction name="separator"/>
+    <addaction name="actionEdit_Crop_ROI"/>
+    <addaction name="actionDrop_Sysgtem_Cache"/>
+    <addaction name="actionShowCameraInfo"/>
+    <addaction name="actionShow_Volume_Bounds"/>
+    <addaction name="separator"/>
+    <addaction name="actionClear_Bag"/>
+    <addaction name="actionExport_Full_HSV_Op_TFs"/>
+    <addaction name="actionInsert_VTK_Lebel_Text"/>
+    <addaction name="actionStash_Camera"/>
+    <addaction name="actionRestore_Camera"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Bag"/>
+    <addaction name="actionReload_Bag"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <addaction name="actionShow_Console"/>
+    <addaction name="actionHide_Console"/>
+    <addaction name="actionLinkUnlinkViewers"/>
+   </widget>
+   <widget class="QMenu" name="menuDebugging">
+    <property name="title">
+     <string>Debugging</string>
+    </property>
+    <addaction name="actionShowCameraAndSceneProperties"/>
+    <addaction name="actionCheck_Leaks"/>
+    <addaction name="actionExportThreatData"/>
+    <addaction name="actionThreat_Window_Print_Self"/>
+    <addaction name="actionTest_Camera_Transform"/>
+    <addaction name="actionTestWindowLevel"/>
+    <addaction name="actionTestColorLevel"/>
+    <addaction name="actionTestImageOverlay"/>
+    <addaction name="actionShow_Current_Threat_Volume"/>
+    <addaction name="actionTest_Zoom_Value"/>
+    <addaction name="actionSet_Test_Update_Rate"/>
+    <addaction name="actionTest_View_Mode"/>
+   </widget>
+   <widget class="QMenu" name="menuLeak_Check">
+    <property name="title">
+     <string>Leak Check</string>
+    </property>
+    <addaction name="actionStart_Leak_Monitor"/>
+    <addaction name="actionPause_Leak_Monitor"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuActions"/>
+   <addaction name="menuWindow"/>
+   <addaction name="menuDebugging"/>
+   <addaction name="menuLeak_Check"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionDorendere">
+   <property name="text">
+    <string>DoRender</string>
+   </property>
+  </action>
+  <action name="actionReset_View">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ReloadIcon.png</normaloff>:/images/ReloadIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset View</string>
+   </property>
+  </action>
+  <action name="actionNew_Bag">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/LoadFileIcon2.png</normaloff>:/images/LoadFileIcon2.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Bag</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/AppExitIcon.png</normaloff>:/images/AppExitIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionReload_Bag">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ReloadIcon.png</normaloff>:/images/ReloadIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reload Bag</string>
+   </property>
+  </action>
+  <action name="actionEdit_Crop_ROI">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/CropIcon.png</normaloff>:/images/CropIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Crop ROI</string>
+   </property>
+  </action>
+  <action name="actionDrop_Sysgtem_Cache">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/CacheIcon.png</normaloff>:/images/CacheIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Drop Sysgtem Cache</string>
+   </property>
+  </action>
+  <action name="actionShowCameraInfo">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/CameraIcon.png</normaloff>:/images/CameraIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Camera Info</string>
+   </property>
+  </action>
+  <action name="actionShow_Console">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ShowIcon.png</normaloff>:/images/ShowIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Console</string>
+   </property>
+  </action>
+  <action name="actionHide_Console">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/HideIcon.png</normaloff>:/images/HideIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Hide Console</string>
+   </property>
+  </action>
+  <action name="actionShow_Volume_Bounds">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ShowIcon.png</normaloff>:/images/ShowIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Volume Bounds</string>
+   </property>
+  </action>
+  <action name="actionClear_Bag">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/EraserIcon.png</normaloff>:/images/EraserIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear Bag</string>
+   </property>
+  </action>
+  <action name="actionExport_Full_HSV_Op_TFs">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ExportIcon.png</normaloff>:/images/ExportIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export Full HSV/Op TFs</string>
+   </property>
+  </action>
+  <action name="actionCheck_Leaks">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/LeakIcon.png</normaloff>:/images/LeakIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check Leaks</string>
+   </property>
+  </action>
+  <action name="actionExportThreatData">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ExportVolumeIcon.png</normaloff>:/images/ExportVolumeIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export Threat Data</string>
+   </property>
+  </action>
+  <action name="actionThreat_Window_Print_Self">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/PrintIcon.png</normaloff>:/images/PrintIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Threat Window Print Self</string>
+   </property>
+  </action>
+  <action name="actionTest_Camera_Transform">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/TransformCameraIcon.png</normaloff>:/images/TransformCameraIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Test Camera Transform</string>
+   </property>
+  </action>
+  <action name="actionTestWindowLevel">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/InverseIcon.png</normaloff>:/images/InverseIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Test Window Level</string>
+   </property>
+  </action>
+  <action name="actionTestColorLevel">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/LeakIcon.png</normaloff>:/images/LeakIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Test Color Level</string>
+   </property>
+  </action>
+  <action name="actionTestImageOverlay">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ScreenShot.png</normaloff>:/images/ScreenShot.png</iconset>
+   </property>
+   <property name="text">
+    <string>Test Image Overlay (Shift + F7)</string>
+   </property>
+  </action>
+  <action name="actionStart_Leak_Monitor">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/StartLeakCheckIcon.png</normaloff>:/images/StartLeakCheckIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start Leak Monitor</string>
+   </property>
+  </action>
+  <action name="actionPause_Leak_Monitor">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/PauseLeakCheckIcon.png</normaloff>:/images/PauseLeakCheckIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause Leak Monitor</string>
+   </property>
+  </action>
+  <action name="actionInsert_VTK_Lebel_Text">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/InsertIcon.png</normaloff>:/images/InsertIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insert VTK Lebel Text</string>
+   </property>
+  </action>
+  <action name="actionLinkUnlinkViewers">
+   <property name="text">
+    <string>Link Viewers</string>
+   </property>
+  </action>
+  <action name="actionShow_Current_Threat_Volume">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/CubeIcon.png</normaloff>:/images/CubeIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Current Threat Volume</string>
+   </property>
+  </action>
+  <action name="actionTest_Zoom_Value">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ZoomIcon.png</normaloff>:/images/ZoomIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset Zoom Count</string>
+   </property>
+  </action>
+  <action name="actionShowCameraAndSceneProperties">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ReloadIcon.png</normaloff>:/images/ReloadIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Shw Camera and Scene Properties</string>
+   </property>
+  </action>
+  <action name="actionSet_Test_Update_Rate">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/RateIcon.png</normaloff>:/images/RateIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Set Test Update Rate</string>
+   </property>
+  </action>
+  <action name="action_ResetRightRenderer">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/RestoreIcon.png</normaloff>:/images/RestoreIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset Right Renderer</string>
+   </property>
+  </action>
+  <action name="actionCenter_Right_Viewer">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/CenterIcon.png</normaloff>:/images/CenterIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Center Right Viewer</string>
+   </property>
+  </action>
+  <action name="actionMakeRightViewerAThreatRenderer">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/ThreatIcon.png</normaloff>:/images/ThreatIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Maker Right Viewe A Threat Renderer</string>
+   </property>
+  </action>
+  <action name="actionPan_Right_Viewer">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/PanIcon.png</normaloff>:/images/PanIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pan Right Viewer</string>
+   </property>
+  </action>
+  <action name="actionTest_View_Mode">
+   <property name="text">
+    <string>Test View Mode</string>
+   </property>
+  </action>
+  <action name="actionStash_Camera">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/StashCameraIcon.png</normaloff>:/images/StashCameraIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stash Camera</string>
+   </property>
+  </action>
+  <action name="actionRestore_Camera">
+   <property name="icon">
+    <iconset resource="VolRender.qrc">
+     <normaloff>:/images/RestoreCameraIcon.png</normaloff>:/images/RestoreCameraIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Restore Camera</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="VolRender.qrc"/>
+ </resources>
+ <connections/>
+</ui>

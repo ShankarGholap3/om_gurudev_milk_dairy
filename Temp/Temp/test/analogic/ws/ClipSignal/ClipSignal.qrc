@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/ClipSignalIcon.png</file>    
+    <file>images/ClipSignalIcon02.png</file>
+    <file>images/EraserIcon.png</file>
+    <file>images/QuestionIcon.png</file>    
+</qresource>
+</RCC>
